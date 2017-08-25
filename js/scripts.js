@@ -8,7 +8,7 @@ function Pizza(size, toppings, total) {
     return this.size + this.toppings;
   }
 }
-
+  var thePizza = new Pizza(0, [0], 0);
 //Pizza.prototype.cost = function () {
 //    return this.size + this.toppings ;
 // };
@@ -19,16 +19,17 @@ function Pizza(size, toppings, total) {
 
 $(document).ready(function() {
   var Top = "" ;
-  var thePizza = new Pizza(0, 0, 0);
+//var thePizza = new Pizza(0, [0], 0);
   $("#pizzaForm").submit(function () {
     event.preventDefault();
     debugger
     $("input:checkbox[name=pizza]:checked").each(function() {
-    this.toppings = $(this).val();
+    thePizza.toppings.array = $(this).val();
+    console.log(thePizza);
     });
-    console.log(thePizza.topping);
+
     $("input:radio[name=size]:checked").each(function(){
-    this.size = $(this).val();
+    thePizza.size = $(this).val();
     });
   });
 });
