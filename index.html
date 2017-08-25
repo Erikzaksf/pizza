@@ -14,20 +14,22 @@
         <h2>Order your pizza!</h2>
       </div>
       <div class="well">
-        <form id="pizzaForm">
-          <select name="size" id="size">
-            <option value="small">Small $10</option>
-            <option value="medium">Medium $15</option>
-            <option value="large">Large $20</option>
-          </select>
+        <form id="pizzaForm" name="form">
+
           <div class="form-group" >
+            <p>Please choose a size:</p>
+            <input type="radio" name="size" value="10">Small <br>
+            <input type="radio" name="size" value="15">Medium <br>
+            <input type="radio" name="size" value="$20">Large <br>
+
             <p>Please select your pizza toppings:</p>
-            <input type="checkbox" name="pizza-toppings" value= "2" > Pepperoni $2<br>
-            <input type="checkbox" name="pizza-toppings" value="1">Mushroom $1<br>
-            <input type="checkbox" name="pizza-toppings" value="1">Onions $1<br>
-            <input type="checkbox" name="pizza-toppings" value="2">Extra Cheese $2<br>
+            <input type="checkbox" name="pizza"  value= "2"  > Pepperoni $2<br>
+            <input type="checkbox" name="pizza" value="1" >Mushroom $1<br>
+            <input type="checkbox" name="pizza" value="1" >Onions $1<br>
+            <input type="checkbox" name="pizza" value="2" >Extra Cheese $2<br>
           </div>
           <button type="submit">Get Total.</button>
+          Total: <input type="text" size="2" name="total" value="0"/>
         </form>
         <span id="total">
           <p><b>Your total cost is:</b></p>
